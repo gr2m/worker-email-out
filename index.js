@@ -1,17 +1,17 @@
 var request = require("request");
 
 var config = {
-  server: process.env["CANG_SERVER"],
+  server: process.env["HOODIE_SERVER"],
   admin: {
-    user: process.env["CANG_ADMIN_USER"],
-    pass: process.env["CANG_ADMIN_PASS"]
+    user: process.env["HOODIE_ADMIN_USER"],
+    pass: process.env["HOODIE_ADMIN_PASS"]
   },
   email: {
-    service: process.env["CANG_EMAIL_SERVICE"],
-    host: process.env["CANG_EMAIL_HOST"],
+    service: process.env["HOODIE_EMAIL_SERVICE"],
+    host: process.env["HOODIE_EMAIL_HOST"],
     auth: {
-      user: process.env["CANG_EMAIL_USER"],
-      pass: process.env["CANG_EMAIL_PASS"]
+      user: process.env["HOODIE_EMAIL_USER"],
+      pass: process.env["HOODIE_EMAIL_PASS"]
     }
   }
 };
