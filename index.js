@@ -1,11 +1,7 @@
 var request = require("request");
 
 var config = {
-  server: process.env["HOODIE_SERVER"],
-  admin: {
-    user: process.env["HOODIE_ADMIN_USER"],
-    pass: process.env["HOODIE_ADMIN_PASS"]
-  },
+  url: process.env["HOODIE_SERVER"],
   email: {
     service: process.env["HOODIE_EMAIL_SERVICE"],
     host: process.env["HOODIE_EMAIL_HOST"],
