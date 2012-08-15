@@ -5,7 +5,7 @@
     "node": "0.6.x"
   },
   "dependencies": {
-    "CouchDBChanges": "~0.0.0",
+    "cradle": "*",
     "nodemailer": "*",
     "request": "*"
   }
