@@ -1,5 +1,5 @@
 {
-  "name": "email-worker",
+  "name": "worker-email",
   "version": "0.0.1",
   "dependencies": {
     "cradle": "*",
