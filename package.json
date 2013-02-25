@@ -1,6 +1,6 @@
 {
   "name": "hoodie-worker-email-out",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "dependencies": {
     "cradle": "git://github.com/cloudhead/cradle.git",
     "nodemailer": "*",
