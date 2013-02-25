@@ -1,6 +1,6 @@
 {
-  "name": "hoodie-worker-email",
-  "version": "0.0.3",
+  "name": "hoodie-worker-email-out",
+  "version": "0.0.4",
   "dependencies": {
     "cradle": "*",
     "nodemailer": "*",
