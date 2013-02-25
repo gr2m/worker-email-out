@@ -1,12 +1,9 @@
 {
   "name": "email-worker",
   "version": "0.0.1",
-  "engines": {
-    "node": "0.6.x"
-  },
   "dependencies": {
     "cradle": "*",
     "nodemailer": "*",
-    "request": "*"
+    "request": "<2.0.0"
   }
 }
