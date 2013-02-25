@@ -2,8 +2,9 @@
   "name": "hoodie-worker-email-out",
   "version": "0.0.4",
   "dependencies": {
-    "cradle": "*",
+    "cradle": "git://github.com/cloudhead/cradle.git",
     "nodemailer": "*",
-    "request": "<2.0.0"
+    "request": "<2.0.0",
+    "hoodie-worker": "git://github.com/hoodiehq/hoodie-worker.git"
   }
 }

@@ -5,7 +5,7 @@ var url = require("url");
 var EmailWorker = require("./lib/email-out.js");
 
 var config = {
-  url: process.env["HOODIE_SERVER"],
+  server: process.env["HOODIE_SERVER"],
   email: {
     service: process.env["HOODIE_EMAIL_SERVICE"],
     host: process.env["HOODIE_EMAIL_HOST"],
@@ -16,22 +16,22 @@ var config = {
   }
 };
 
-var uri = url.parse(config.url);
+var uri = url.parse(config.server);
+console.log(uri);
 config.couch = new(cradle.Connection)(uri);
-
+config.name = "email-out";
+// console.log(config.couch);
 var workers = [];
-request({
-  uri: config.url + "/_all_dbs"
-}, function(error, response, body) {
-  if(error !== null) {
-    console.warn("init error, _all_dbs: " + error);
-  }
+config.couch.databases(function(error, dbs) {
+  console.log(error);
+  console.log(dbs);
 
-  var dbs = JSON.parse(body);
   dbs.forEach(function(db) {
-    if(!db.match(/\$/)) { return; }
     if(db.substr(-7) == "$public") { return; }
-    var worker = new EmailWorker(config, db);
+    if(db[0] == "_") { return; }
+    if(db == "modules") { return; }
+    config.db = db;
+    var worker = new EmailWorker(config);
     workers.push(worker);
   });
 });
